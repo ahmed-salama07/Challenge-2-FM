@@ -451,3 +451,24 @@ footer input[type="text"] {
 }
 
 /* End Footer */
+
+/* Start Credits */
+.credits {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: -50px;
+    color: var(--Very-Dark-Violet);
+    background-color: var(--Grayish-Blue);
+}
+
+.credits a {
+    color: var(--Light-Violet);
+    transition: .3s;
+}
+
+.credits a:hover {
+    color: var(--Light-Magenta);
+}
+
+/* End Credits */
