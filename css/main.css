@@ -1,0 +1,453 @@
+/* Start Variables */
+:root {
+
+    /* Text */
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    --Dark-Violet: hsl(271, 15%, 43%);
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    --Very-Dark-Violet: hsl(271, 36%, 24%);
+    --Grayish-Violet: hsl(270, 7%, 64%);
+
+    /* Gradients */
+
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+/* End Variables */
+
+
+/* Start Global Rules */
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+}
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Start Components */
+.chat {
+    background-color: var(--Light-Grayish-Violet);
+    color: var(--Moderate-Violet);
+    width: fit-content;
+    max-width: 71%;
+    height: fit-content;
+    font-size: 0.6rem;
+    margin: 1.5vh;
+    padding: 0.5vh 1vh 0.5vh 0.5vh;
+    border-radius: 6px;
+    animation-name: left-to-right;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+.fr-chat {
+    background-color: white;
+    color: black;
+    width: fit-content;
+    max-width: 71%;
+    height: fit-content;
+    font-size: 0.6rem;
+    margin: 1.5vh;
+    padding: 0.5vh 0.5vh 0.5vh 1vh;
+    border-radius: 6px;
+    justify-self: flex-end;
+    animation-name: right-to-left;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    position: relative;
+    transition: 0.5s;
+}
+
+@keyframes left-to-right {
+    from {
+        right: 200px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes right-to-left {
+    from {
+        left: 200px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.chat p,
+.fr-chat p {
+    padding: auto 0.8vh auto 0.8vh;
+}
+
+.purple-block {
+    background-image: linear-gradient(90deg, var(--Light-Magenta), var(--Light-Violet));
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    height: fit-content;
+    margin: 1.5vh;
+    border-radius: 10px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    animation-name: move-anim;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    position: relative;
+}
+
+@keyframes move-anim {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(50px);
+    }
+}
+
+.purple-block::before {
+    content: "";
+    position: absolute;
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 50%;
+    border: 2px solid var(--Very-Light-Magenta);
+    background-color: transparent;
+    left: 1vh;
+    top: 1vh;
+}
+
+.purple-block p {
+    margin-left: 1vh;
+    font-size: 0.5rem;
+    padding-left: 2vh;
+}
+
+.purple-block span {
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 1vh;
+}
+
+/* End Components */
+
+
+/* Start Background */
+
+.background {
+    width: 100vh;
+    position: relative;
+}
+
+.background::before {
+    content: "";
+    width: 75vh;
+    height: 80vh;
+    background-image: linear-gradient(180deg, var(--Light-Magenta), var(--Light-Violet));
+    position: absolute;
+    border-image: 10px solid transparent;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    left: -20%;
+    z-index: 1;
+}
+
+@media (min-width: 550px) and (max-width: 919px) {
+    .background::before {
+        margin-left: -200px;
+        margin-top: -150px;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 920px) and (max-width: 1250px) {
+    .background::before {
+        margin-left: -100px;
+        margin-top: -75px;
+        z-index: 1;
+    }
+}
+
+/* End background */
+
+/* Start Front Page */
+
+.front-page {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Grayish-Blue);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.front-page .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 11vh;
+    left: 46vh;
+    /* flex-wrap: wrap; */
+}
+
+@media (min-width: 550px) and (max-width: 919px) {
+    .front-page .container {
+        flex-direction: column;
+        margin-left: -270px;
+        margin-top: -50px;
+    }
+}
+
+@media (min-width: 920px) and (max-width: 1250px) {
+    .front-page .container {
+        margin-left: -170px;
+        margin-top: -25px;
+    }
+}
+
+.front-page .container .phone {
+    width: 30vh;
+    height: 60vh;
+    border: 10px solid white;
+    background-color: var(--Grayish-Blue);
+    margin-right: 20vh;
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.front-page .container .phone::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16vh;
+    height: 4vh;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+.front-page .container .text {
+    width: 45vh;
+}
+
+@media (min-width: 550px) and (max-width: 919px) {
+    .front-page .container .text {
+        text-align: center;
+        width: 300px;
+        margin-left: -200px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 920px) and (max-width: 1250px) {
+    .front-page .container .text {
+        text-align: center;
+        width: 300px;
+        margin-left: -100px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+.front-page .container .text h2 {
+    color: var(--Very-Dark-Violet);
+    margin-bottom: 3vh;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.front-page .container .text p {
+    color: var(--Grayish-Violet);
+    line-height: 1.6;
+}
+
+
+
+.front-page .container header {
+    background-image: linear-gradient(270deg, var(--Light-Magenta), var(--Light-Violet));
+    width: 100%;
+    height: 15%;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-top: 1vh;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    position: relative;
+}
+
+.front-page .container header::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f104";
+    font-weight: 900;
+    left: 1.5vh;
+    top: 5vh;
+    position: absolute;
+    font-size: x-small;
+    color: white;
+}
+
+
+.front-page .container header::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f142";
+    font-weight: 900;
+    right: 2vh;
+    top: 5vh;
+    position: absolute;
+    font-size: x-small;
+    color: white;
+}
+
+
+.front-page .container header img {
+    max-width: 100%;
+    height: 23px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-left: 2.8vh;
+    margin-bottom: 1.8vh;
+}
+
+.front-page .container header .text-header {
+    margin-left: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+.front-page .container header .text-header h5 {
+    color: white;
+    font-size: 0.65rem;
+    font-weight: normal;
+}
+
+.front-page .container header .text-header p {
+    font-size: 0.48rem;
+    color: var(--Grayish-Violet);
+    padding-top: 0.5vh;
+}
+
+
+/* End Front Page */
+
+/* Start Dog images */
+.dog-images {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dog-images img {
+    max-width: 100%;
+    height: 6.5vh;
+    margin-right: 1vh;
+    border-radius: 10px;
+    animation-name: dog-rotate;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes dog-rotate {
+    to {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+/* End Dog images */
+
+/* Start Footer */
+footer {
+    position: relative;
+}
+
+footer::after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    font-weight: 900;
+    top: 8%;
+    right: 7%;
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    color: white;
+    width: 2vh;
+    height: 2vh;
+    text-align: center;
+    padding: 1vh;
+    border-radius: 50%;
+    cursor: pointer;
+    animation-name: rolling;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes rolling {
+    to {
+        transform: translateX(-200px) rotate(360deg);
+    }
+}
+
+footer input[type="text"] {
+    display: block;
+    background-color: white;
+    outline: none;
+    border: none;
+    margin: 1vh auto;
+    width: 90%;
+    border: none;
+    padding: 1.5vh 1vh 1.5vh 2vh;
+    border-radius: 30px;
+}
+
+@keyframes bounce {
+    100% {
+        top: -20px;
+        text-shadow: 0 1px #ccc, 0 2px #ccc, 0 3px #ccc, 0 4px #ccc, 0 5px #ccc, 0 6px #ccc, 0 7px #ccc, 0 8px #ccc, 0 9px #ccc, 0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* End Footer */
