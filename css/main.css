@@ -409,6 +409,8 @@ footer input[type="text"] {
     border: none;
     padding: 1.5vh 1vh 1.5vh 2vh;
     border-radius: 30px;
+    caret-color: var(--Light-Magenta);
+    color: var(--Light-Magenta);
 }
 
 /* End Phone */
