@@ -11,7 +11,7 @@
     <!-- Font Awesome Library -->
     <link rel="stylesheet" href="css/all.min.css">
     <!-- Main Template CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main2.css">
     <!-- Google Work Sans Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,18 +20,32 @@
 </head>
 
 <body>
-    <div class="background"></div>
+    <div class="background">
+        <div class="purple-background"></div>
+        <div class="transparent-background"></div>
+    </div>
 
-    <div class="front-page">
+    <div class="page">
         <div class="container">
             <div class="phone">
-                <header>
-                    <img src="images/avatar.jpg" alt="Avatar">
-                    <div class="text-header">
-                        <h5>Samuel Green</h5>
-                        <p>Available to Walk</p>
+                <div class="phone-header">
+                    <div class="phone-header-camera"></div>
+                    <div class="phone-header-all">
+                        <div class="header-content">
+                            <div class="arrow-img">
+                                <i class="fa-solid fa-angle-left"></i>
+                                <img src="images/avatar.jpg" alt="Avatar">
+                            </div>
+                            <div class="text-header">
+                                <h5>Samuel Green</h5>
+                                <p>Available to Walk</p>
+                            </div>
+                        </div>
+                        <div class="points">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
                     </div>
-                </header>
+                </div>
                 <div class="main-chatting">
                     <div class="chat">
                         <p>That sounds great.I'd be <br>happy with that.</p>
@@ -57,16 +71,21 @@
                     </div>
                 </div>
                 <div class="purple-block">
+                    <div class="button-purpleblock"></div>
                     <p>30 minute walk</p>
                     <span>$29</span>
                 </div>
                 <div class="purple-block">
+                    <div class="button-purpleblock"></div>
                     <p>1 hour walk</p>
                     <span>$49</span>
                 </div>
-                <footer>
+                <div class="phone-footer">
                     <input type="text" class="message" placeholder="Type a message..">
-                </footer>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
             </div>
             <div class="text">
                 <h2>Simple booking</h2>
@@ -76,17 +95,16 @@
                 </p>
             </div>
         </div>
-    </div>
-    <!-- Start Credits -->
-    <div class="credits">
-        <div class="container">
+        <div class="credits">
             Challenged by
             <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
             Coded by
             <a href="https://www.github.com/ahmed-salama07" target="_blank">Ahmed Salama</a>
         </div>
     </div>
-    <!-- End Credits -->
+
+
+
 </body>
 
 </html>
