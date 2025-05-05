@@ -188,7 +188,7 @@ body {
     height: 100vh;
     display: inline-flex;
     justify-content: space-between;
-    /* overflow: hidden; */
+    overflow: hidden;
     z-index: 1;
 }
 
@@ -205,6 +205,13 @@ body {
     .background .purple-background {
         margin-left: -55vh;
         margin-top: -18vh;
+    }
+
+}
+
+@media (min-width: 1441px) {
+    .background .purple-background {
+        margin-left: -38vh;
     }
 
 }
@@ -257,6 +264,7 @@ body {
     }
 
 }
+
 
 
 .container .phone {
