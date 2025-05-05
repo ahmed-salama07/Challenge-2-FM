@@ -35,6 +35,8 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 1440px;
+    width: 100%;
 }
 
 
@@ -42,7 +44,8 @@ body {
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     max-width: 1440px;
-    overflow: hidden;
+    min-height: 100vh;
+    /* overflow: hidden; */
 }
 
 
@@ -51,7 +54,6 @@ body {
     color: var(--Moderate-Violet);
     width: fit-content;
     max-width: 71%;
-    height: fit-content;
     font-size: 0.6rem;
     margin: 1.5vh;
     padding: 0.5vh 1vh 0.5vh 0.5vh;
@@ -70,7 +72,6 @@ body {
     color: black;
     width: fit-content;
     max-width: 71%;
-    height: fit-content;
     font-size: 0.6rem;
     margin: 1.5vh;
     padding: 0.5vh 0.5vh 0.5vh 1vh;
@@ -83,6 +84,15 @@ body {
     box-shadow: 4px 4px 30px hsla(271, 36%, 24%, 0.37);
     position: relative;
     transition: 0.5s;
+}
+
+@media (min-width: 375px) and (max-width: 919px) {
+
+    .chat,
+    .fr-chat {
+        margin: 1vh;
+    }
+
 }
 
 
@@ -386,6 +396,12 @@ body {
     width: 90%;
 }
 
+@media (min-width: 375px) and (max-width: 919px) {
+    .phone-footer input[type="text"] {
+        margin-bottom: 2%;
+    }
+}
+
 .icon-wrapper {
     display: flex;
     align-items: center;
@@ -422,7 +438,7 @@ body {
     .container .text {
         width: 83%;
         text-align: center;
-        margin: 1vh auto;
+        margin: 7vh auto;
     }
 
 }
