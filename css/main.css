@@ -346,12 +346,12 @@ body {
 
 .container .phone-header .phone-header-all .text-header h5 {
     color: white;
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     font-weight: normal;
 }
 
 .container .phone-header .phone-header-all .text-header p {
-    font-size: 0.5rem;
+    font-size: 0.65rem;
     color: var(--Grayish-Violet);
     padding-top: 0.5vh;
 }
