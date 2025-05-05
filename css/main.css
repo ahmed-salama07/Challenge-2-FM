@@ -86,14 +86,14 @@ body {
     transition: 0.5s;
 }
 
-@media (min-width: 375px) and (max-width: 919px) {
+/* @media (min-width: 375px) and (max-width: 919px) {
 
     .chat,
     .fr-chat {
         margin: 1vh;
     }
 
-}
+} */
 
 
 @keyframes left-to-right {
@@ -141,14 +141,6 @@ body {
     position: relative;
     transition: 0.5s;
 }
-
-@media (min-width: 375px) and (max-width: 919px) {
-    .purple-block {
-        margin: 0.5vh;
-    }
-
-}
-
 
 @keyframes move-anim {
     from {
@@ -415,11 +407,11 @@ body {
     width: 90%;
 }
 
-@media (min-width: 375px) and (max-width: 919px) {
+/* @media (min-width: 375px) and (max-width: 919px) {
     .phone-footer input[type="text"] {
         margin-bottom: 2%;
     }
-}
+} */
 
 .icon-wrapper {
     display: flex;
