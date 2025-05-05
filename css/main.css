@@ -301,11 +301,17 @@ body {
     z-index: 2;
 }
 
+
+
 .container .phone-header .phone-header-all .header-content .arrow-img {
     color: white;
     display: flex;
     align-items: center;
     margin: 3vh 1vh 0 2vh;
+}
+
+.container .phone-header .phone-header-all .header-content .arrow-img i {
+    cursor: pointer;
 }
 
 .container .phone-header .phone-header-all {
@@ -317,6 +323,7 @@ body {
 .container .phone-header .phone-header-all .points {
     margin: 3vh 1vh 0 0;
     color: white;
+    cursor: pointer;
 }
 
 .container .phone-header .phone-header-all .header-content {
