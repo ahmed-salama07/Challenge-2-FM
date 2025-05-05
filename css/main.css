@@ -64,7 +64,6 @@ body {
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     transition: 0.5s;
-    position: relative;
 }
 
 .fr-chat {
@@ -81,7 +80,6 @@ body {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    position: relative;
     transition: 0.5s;
 }
 
@@ -137,7 +135,6 @@ body {
     animation-iteration-count: 2;
     animation-timing-function: linear;
     animation-direction: alternate;
-    position: relative;
     transition: 0.5s;
 }
 
@@ -272,7 +269,7 @@ body {
     background-color: var(--Light-Grayish-Violet);
     border-radius: 30px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     box-shadow: 4px 4px 30px hsla(271, 36%, 24%, 0.37);
 }
 
