@@ -124,14 +124,11 @@ body {
 }
 
 .purple-block {
+    display: flex;
     background-image: linear-gradient(90deg, var(--Light-Magenta), var(--Light-Violet));
     color: white;
-    display: flex;
-    /* justify-content: space-around; */
     align-items: center;
-    position: relative;
     width: 70%;
-    height: fit-content;
     margin: 1.5vh;
     border-radius: 10px;
     border-bottom-left-radius: 3px;
@@ -143,6 +140,13 @@ body {
     animation-direction: alternate;
     position: relative;
     transition: 0.5s;
+}
+
+@media (min-width: 375px) and (max-width: 919px) {
+    .purple-block {
+        margin: 0.5vh;
+    }
+
 }
 
 
